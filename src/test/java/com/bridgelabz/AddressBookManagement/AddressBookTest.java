@@ -21,6 +21,7 @@ public class AddressBookTest {
 		Assert.assertEquals(2, listSize);
 	}
 	@Test
+	
 	public void given2Contacts_WhenWrittenToFile_ShouldMatchEntries()
 	{
 		AddressBookFileIO addressFileIO = new AddressBookFileIO();
@@ -29,6 +30,7 @@ public class AddressBookTest {
 		long entries = addressFileIO.countEntries("book1.txt");
 		Assert.assertEquals(2, entries);
 	}
+	
 	@Test
 	public void givenFile_WhenRead_ShouldReturnNumberOfEntries() {
 		AddressBookFileIO addressFileIO = new AddressBookFileIO();
