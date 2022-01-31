@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-import com.bridgelabz.addressbookmanagement.AddressBook.IOService;
+import com.bridgelabz.addressbookmanagementsystem.AddressBook.IOService;
 import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 
@@ -24,5 +24,5 @@ public interface AddressBookIF {
 	public void writeDataToCSV() throws IOException, CsvRequiredFieldEmptyException, CsvDataTypeMismatchException;
 	public <CsvValidationException extends Throwable> void readDataFromCSV() throws IOException, CsvValidationException;
 	public void writeDataToJson() throws IOException;
-		public void readDataFromJson() throws IOException;
+	public void readDataFromJson() throws IOException;
 }
