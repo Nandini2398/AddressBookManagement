@@ -24,14 +24,20 @@ public class AddressBookFileIO {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
+
 	}
+	
 	public void printData(String fileName) {
+		
 		try {
 			Files.lines(new File(fileName).toPath()).forEach(System.out::println);
 		}
 		catch(IOException e) {e.printStackTrace();}
+		
 	}
+
 	public long countEntries(String fileName) {
+		
 		long entries=0;
 		try {
 			entries = Files.lines(new File(fileName).toPath()).count();
@@ -39,8 +45,11 @@ public class AddressBookFileIO {
 		catch(IOException e) {e.printStackTrace();};
 		return entries;
 	}
+	
 	public List<String> readDataFromFile(String fileName) {
+		
 		List<String> addressBookList = new ArrayList<String>();
+		
 		System.out.println("Reading from : "+fileName+"\n");
 		try {
 			Files.lines(new File(fileName).toPath())
@@ -49,10 +58,12 @@ public class AddressBookFileIO {
 					System.out.println(employeeDetails);
 					addressBookList.add(employeeDetails);
 			});
+			
 		}
 		catch(IOException e){
 			e.printStackTrace();
 		}
 		return addressBookList;
 	}
+	
 }
