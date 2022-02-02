@@ -166,7 +166,6 @@ public class AddressBookDirectory implements AddressBookDirectoryIF{
 				e.printStackTrace();
 			}
 			System.out.println("]\n");
-			
 		}
 		System.out.println("}");
 		
